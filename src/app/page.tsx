@@ -1,3 +1,4 @@
+import MyMarkdown from "@/components/MyMarkdown";
 import BlogData from "@/data/blog-id"
 import Image from 'next/image'
 
@@ -47,18 +48,19 @@ export default function Home() {
         <div className="p-5 xl:p-10 space-y-5">
           
           <div>
-            <h1 className="font-mono text-4xl  font-thin	  ">SYNOPSIS</h1>
-            <p className="text-md xl:text-xl">{BlogData.synopsis}</p>
+            <h1 className="font-mono text-4xl  font-thin">SYNOPSIS</h1>
+            <p className="text-md">{BlogData.synopsis}</p>
           </div>
 
-          { BlogData.content.map(val => 
-                                 <div>
-                                    <h1 className="font-mono text-4xl  font-thin	  ">{val.header}</h1>
-                                    <p className="text-md xl:text-xl">{val.body}</p>
-                                 </div>) }
+          { BlogData.content.map((val, i) => 
+              <div key={i}>
+                <h1 className="font-mono text-4xl  font-thin">{val.header}</h1>
+                <MyMarkdown>{val.body}</MyMarkdown>
+              </div>) }
 
 
         </div>
+
 
       </section>
     </main>
