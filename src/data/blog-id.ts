@@ -6,6 +6,7 @@ let SAMPLE_BLOG_DATA = {
   "category": "WEB",
   "slug": "introduction-to-web-development",
   "likes": 245,
+  "read": 60,
   "headerImage": "https://img.freepik.com/free-vector/gradient-grainy-gradient-texture-wallpaper_23-2148967810.jpg?t=st=1731833595~exp=1731837195~hmac=4177e7e091efdc5797f6fcbd4b6be2d4a51891934f48124d879a9a7a1623c5e2&w=2000",
   "synopsis": `An in-depth guide to getting started with web development, covering HTML, CSS, and JavaScript.
     Enim adipisicing sint id dolore eu qui do aliquip aliquip deserunt do. Adipisicing sit Lorem reprehenderit ut id amet et quis. Fugiat occaecat officia ullamco proident est ad. In consectetur sint duis. Irure nostrud nulla laborum. Laboris laborum ullamco dolore cillum consequat laborum. Cillum dolor in ipsum quis sit eu. Culpa nostrud occaecat irure cillum.
