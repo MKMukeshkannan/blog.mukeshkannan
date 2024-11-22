@@ -21,6 +21,12 @@ import Image from 'next/image'
 //         author: string;
 //         comment: string;
 //         postedAt: string;
+//         replies:{
+//          id: number;
+//          author: string;
+//          comment: string;
+//          postedAt: string;
+//         };
 //     }[];
 // }
 
@@ -57,8 +63,43 @@ export default function Home() {
                 <h1 className="font-mono text-4xl  font-thin">{val.header}</h1>
                 <MyMarkdown>{val.body}</MyMarkdown>
               </div>) }
+        </div>
 
+        <div className="h72 w-full p-5 xl:p-10">
+          <h1 className="font-mono text-4xl font-bold mb-5">Comments</h1>
+          { BlogData.comments.map((val, i) => {
+            const date = new Date(val.postedAt);
+ 
+            return (
+              <div className="order p-2 mb-5" key={i}>
+                <div className="flex space-x-3 itemscenter">
+                  <div className="h-12 w-12 bg-black rounded-full"></div>
+                  <div className="flex flex-col"> 
+                    <h1 className="text-xl">{val.author}</h1>
+                    <p className="text-xs text-[#808080]">{date.getDate()}-{date.getMonth()}-{date.getFullYear()}</p>
+                    <MyMarkdown>{val.comment}</MyMarkdown>
+                  </div>
+                </div>
 
+          { val.replies.map((val, i) => {
+            const date = new Date(val.postedAt);
+ 
+            return <div className="border-l p-2 ml-12" key={i}>
+                <div className="flex space-x-3 itemscenter">
+                  <div className="h-12 w-12 bg-black rounded-full"></div>
+                  <div className="flex flex-col"> 
+                    <h1 className="text-xl">{val.author}</h1>
+                    <p className="text-xs text-[#808080]">{date.getDate()}-{date.getMonth()}-{date.getFullYear()}</p>
+                    <MyMarkdown>{val.comment}</MyMarkdown>
+                  </div>
+                </div>
+              </div>
+          }) 
+        }
+              </div>)
+          }) 
+        }
+        
         </div>
 
 

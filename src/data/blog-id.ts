@@ -29,13 +29,41 @@ let SAMPLE_BLOG_DATA = {
       "id": 101,
       "author": "Jane Doe",
       "comment": "Great article! Helped me a lot as a beginner.",
-      "postedAt": "2024-11-17T15:30:00Z"
+      "postedAt": "2024-11-17T15:30:00Z",
+      "replies": [
+        {
+          "id": 101,
+          "author": "Jane Doe",
+          "comment": "Great article! Helped me a lot as a beginner.",
+          "postedAt": "2024-11-17T15:30:00Z",
+        },
+        {
+          "id": 101,
+          "author": "Jane Doe",
+          "comment": "Great article! Helped me a lot as a beginner.",
+          "postedAt": "2024-11-17T15:30:00Z",
+        },
+      ]
     },
     {
       "id": 102,
       "author": "John Smith",
       "comment": "Could you provide examples for advanced topics?",
-      "postedAt": "2024-11-17T16:10:00Z"
+      "postedAt": "2024-11-17T16:10:00Z",
+      "replies": [
+        {
+          "id": 101,
+          "author": "Jane Doe",
+          "comment": "Great article! Helped me a lot as a beginner.",
+          "postedAt": "2024-11-17T15:30:00Z",
+        },
+        {
+          "id": 101,
+          "author": "Jane Doe",
+          "comment": "Great article! Helped me a lot as a beginner.",
+          "postedAt": "2024-11-17T15:30:00Z",
+        },
+      ]
     }
   ]
 }
